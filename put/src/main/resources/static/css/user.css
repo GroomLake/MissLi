@@ -1,0 +1,53 @@
+
+body{
+    width: 100%;
+    height: 100%;
+}
+#main{
+    background-color: #f6f6f6;
+}
+.con{
+    margin: 20px auto;
+    width: 800px;
+    height: 600px;
+    border: 1px gold dashed;
+}
+#name{
+    line-height: 40px;
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+}
+.info{
+    width: 160px;
+    height: 40px;
+    font-size: 26px;
+    text-align: center;
+    line-height: 30px;
+    font-weight: bolder;
+    margin-left: 99px;
+}
+.status{
+    width: 600px;
+    height: 300px;
+    border: 1px seagreen dashed;
+    margin: 10px auto;
+    padding: 30px;
+}
+.status p{
+    display: block;
+    width: 100px;
+    height: 40px;
+    font-size: 36px;
+    float: left;
+    line-height: 40px;
+    margin-top: 30px;
+}
+#img{
+    width: 100px;
+    height: 100px;
+    float: left;
+    background-image: url("/images/user/rong.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
