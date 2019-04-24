@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="ace.auth.front.miss.dao.Userdao">
+    <insert id="saveUser" parameterType="com.miss.pojo.User">
+        insert into user (username,password,telphone,projectteam,department) values
+        (
+        #{user.userName},#{user.password},#{user.telphone},#{user.projectTeam},#{user.department}
+        )
+    </insert>
+    <update id="updateUserByname">
+        update user set password=#{user.password},telphone=#{user.telphone},projectteam=#{user.projectTeam},
+        department=#{user.department} where username=#{user.userName}
+    </update>
+
+    <select id="findUserByName" resultType="com.miss.pojo.User">
+        select * from user where username=#{name}
+    </select>
+    <select id="findUserByNameAndPassword" resultType="com.miss.pojo.User">
+        select * from user where username=#{name} and password=#{password}
+    </select>
+</mapper>

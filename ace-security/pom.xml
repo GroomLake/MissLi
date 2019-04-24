@@ -33,7 +33,6 @@
         <module>ace-gate</module>
         <module>ace-common</module>
         <module>ace-auth</module>
-        <module>ace-sidecar</module>
         <module>ace-control</module>
         <module>ace-modules</module>
     </modules>

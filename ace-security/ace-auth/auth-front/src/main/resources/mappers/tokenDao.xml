@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="ace.auth.front.miss.dao.TokenDao">
+    <insert id="saveToken" parameterType="com.miss.pojo.Token">
+        insert into usertoken (username,token,tokentime) values (
+        #{token.userName},#{token.token},#{token.tokenTime}
+        )
+    </insert>
+
+    <select id="findAllToken" resultType="com.miss.pojo.Token">
+        select * from usertoken
+    </select>
+    <select id="findTokenByUserName" parameterType="java.lang.String" resultType="com.miss.pojo.Token">
+        select * from usertoken where username=#{userName}
+    </select>
+</mapper>
