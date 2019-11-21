@@ -1,0 +1,42 @@
+server:
+  port: 8082
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+  datasource:
+    username: root
+    password: L4826866
+    type: com.alibaba.druid.pool.DruidDataSource
+    platform: mysql
+    url: jdbc:mysql://127.0.0.1:3306/outsourc?useUnicode=true&characterEncoding=utf8&serverTimezone=UTC&useSSL=true
+    driver-class-name: com.mysql.jdbc.Driver
+    filters: stat
+    maxActive: 20
+    initialSize: 1
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 20
+  redis:
+    database: 4
+    password:
+    host: 127.0.0.1
+    port: 6379
+mybatis:
+  mapper-locations: classpath:/mappers/*.xml
+  type-aliases-package: com.miss.pojo
+
+##分页插件配置
+#pagehelper:
+#  helper-dialect: musql
+#  reasonable: true
+#  offset-as-page-num: true
+#  row-bounds-with-count: true
